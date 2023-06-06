@@ -51,12 +51,12 @@ function calculateMonthlyPayment(values) {
   return (
     (monthlyRate * values.amount) /
     (1 - Math.pow((1 + monthlyRate), -n))
-  ).toFixed(2);
+  ).toFixed(2); //makes sure decimal places is 2 //
 }
 
 // Given a string representing the monthly payment value,
 // update the UI to show the value.
-// 3rd ?
+// 3rd purpose is to update UI
 function updateMonthly(monthly) {
   const monthlyUI = document.getElementyById("monthly-payment");
   monthlyUI.innerText = "$" + monthly;
